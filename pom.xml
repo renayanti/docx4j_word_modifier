@@ -16,6 +16,7 @@
             <groupId>org.docx4j</groupId>
             <artifactId>docx4j</artifactId>
             <version>3.3.7</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
 </project>
