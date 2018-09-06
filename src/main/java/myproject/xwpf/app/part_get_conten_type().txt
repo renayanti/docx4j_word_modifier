@@ -1,0 +1,22 @@
+part.getContentType()
+	debug===========>application/vnd.openxmlformats-officedocument.extended-properties+xml
+	debug===========>application/vnd.openxmlformats-package.core-properties+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.webSettings+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml
+	debug===========>image/jpeg
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml
+	debug===========>application/xml
+	debug===========>application/vnd.openxmlformats-officedocument.customXmlProperties+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml
+	debug===========>application/vnd.openxmlformats-officedocument.theme+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml
+	debug===========>image/jpeg
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml
+	debug===========>application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml

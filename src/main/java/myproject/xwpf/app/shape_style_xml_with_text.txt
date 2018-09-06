@@ -1,0 +1,243 @@
+cd /home/x/Projects/docx4j; JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 /home/x/netbeans-8.2/java/maven/bin/mvn "-Dexec.args=-classpath %classpath myproject.xwpf.app.Process" -Dexec.executable=/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java org.codehaus.mojo:exec-maven-plugin:1.2.1:exec
+Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+Scanning for projects...
+                                                                        
+------------------------------------------------------------------------
+Building docx4j 1.0-SNAPSHOT
+------------------------------------------------------------------------
+
+--- exec-maven-plugin:1.2.1:exec (default-cli) @ xwpf-app ---
+INFO org.docx4j.jaxb.Context .<clinit> line 86 - java.vendor=Oracle Corporation
+0 [AWT-EventQueue-0] INFO org.docx4j.jaxb.Context  - java.vendor=Oracle Corporation
+INFO org.docx4j.jaxb.Context .<clinit> line 87 - java.version=1.8.0_181
+2 [AWT-EventQueue-0] INFO org.docx4j.jaxb.Context  - java.version=1.8.0_181
+INFO org.docx4j.jaxb.NamespacePrefixMapperUtils .getPrefixMapper line 75 - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+97 [AWT-EventQueue-0] INFO org.docx4j.jaxb.NamespacePrefixMapperUtils  - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+INFO org.docx4j.jaxb.Context .<clinit> line 206 - Not using MOXy; using com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl
+2987 [AWT-EventQueue-0] INFO org.docx4j.jaxb.Context  - Not using MOXy; using com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl
+INFO org.docx4j.jaxb.Context .<clinit> line 208 - Using Java 6+ JAXB implementation
+2988 [AWT-EventQueue-0] INFO org.docx4j.jaxb.Context  - Using Java 6+ JAXB implementation
+WARN org.docx4j.jaxb.JaxbValidationEventHandler .handleEvent line 89 - [ERROR] : unexpected element (uri:"http://schemas.openxmlformats.org/markup-compatibility/2006", local:"AlternateContent"). Expect
+3384 [AWT-EventQueue-0] WARN org.docx4j.jaxb.JaxbValidationEventHandler  - [ERROR] : unexpected element (uri:"http://schemas.openxmlformats.org/markup-compatibility/2006", local:"AlternateContent"). Expect
+WARN org.docx4j.jaxb.JaxbValidationEventHandler .handleEvent line 104 - Column is 918 at line number 2
+3384 [AWT-EventQueue-0] WARN org.docx4j.jaxb.JaxbValidationEventHandler  - Column is 918 at line number 2
+INFO org.docx4j.jaxb.JaxbValidationEventHandler .handleEvent line 188 - shouldContinue is set to false
+3385 [AWT-EventQueue-0] INFO org.docx4j.jaxb.JaxbValidationEventHandler  - shouldContinue is set to false
+method: xml
+((JaxbXmlPart)source).getJAXBContext()).toString() =======><w:document mc:Ignorable="w14 wp14" xmlns:dsp="http://schemas.microsoft.com/office/drawing/2008/diagram" xmlns:cppr="http://schemas.microsoft.com/office/2006/coverPageProps" xmlns:odx="http://opendope.org/xpaths" xmlns:c14="http://schemas.microsoft.com/office/drawing/2007/8/2/chart" xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:odgm="http://opendope.org/SmartArt/DataHierarchy" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" xmlns:we="http://schemas.microsoft.com/office/webextensions/webextension/2010/11" xmlns:pvml="urn:schemas-microsoft-com:office:powerpoint" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:sl="http://schemas.openxmlformats.org/schemaLibrary/2006/main" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:comp="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:b="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:xvml="urn:schemas-microsoft-com:office:excel" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:oda="http://opendope.org/answers" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:odc="http://opendope.org/conditions" xmlns:cdr="http://schemas.openxmlformats.org/drawingml/2006/chartDrawing" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:odi="http://opendope.org/components" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:lc="http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas" xmlns:odq="http://opendope.org/questions" xmlns:wetp="http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11" xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid">
+    <w:body>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+                <w:spacing w:before="240" w:after="60"/>
+                <w:rPr/>
+            </w:pPr>
+            <w:r>
+                <w:pict>
+                    <v:line from="-33.85pt,-0.05pt" to="3.75pt,57.25pt" style="position:absolute;flip:x" id="shape_0" stroked="t">
+                        <v:stroke color="#3465a4" joinstyle="round" endcap="flat"/>
+                        <v:fill on="false" o:detectmouseclick="t"/>
+                    </v:line>
+                </w:pict>
+            </w:r>
+            <w:r>
+                <w:rPr/>
+                <w:t>What is the purpose of this manual?</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Normal"/>
+                <w:spacing w:before="120" w:after="120"/>
+                <w:rPr/>
+            </w:pPr>
+            <w:r>
+                <w:pict>
+                    <v:line from="-33.85pt,23.85pt" to="-32.1pt,144.95pt" style="position:absolute" id="shape_0" stroked="t">
+                        <v:stroke color="#3465a4" joinstyle="round" endcap="flat"/>
+                        <v:fill on="false" o:detectmouseclick="t"/>
+                    </v:line>
+                </w:pict>
+            </w:r>
+            <w:r>
+                <w:rPr/>
+                <w:t>The “INVESTIGATOR MANUAL (HRP-103)” is designed to guide you through policies, procedures, and resources related to the conduct of Human Research that are specific to the University of Minnesota (“University”).</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Normal"/>
+                <w:spacing w:before="120" w:after="120"/>
+                <w:rPr/>
+            </w:pPr>
+            <w:r>
+                <w:rPr/>
+                <w:t xml:space="preserve">Along with this manual, current Human Research-related policies, SOPs, Worksheets, Checklists and templates may be found in the </w:t>
+            </w:r>
+            <w:hyperlink r:id="rId2">
+                <w:r>
+                    <w:rPr>
+                        <w:rStyle w:val="InternetLink"/>
+                        <w:color w:val="0000FF"/>
+                        <w:u w:val="single"/>
+                    </w:rPr>
+                    <w:t>HRPP Toolkit Library</w:t>
+                </w:r>
+            </w:hyperlink>
+            <w:r>
+                <w:rPr/>
+                <w:t xml:space="preserve">.  Collectively, the Toolkit Library creates a complete picture of Human Research Protection Program (“HRPP”) and Institutional Review Board (“IRB”) expectations and a guide to seeking IRB review and approval.  The Toolkit is also used by HRPP staff and IRB members to enhance compliance with federal, state and local requirements for conducting research and protecting human participants. </w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Normal"/>
+                <w:spacing w:before="120" w:after="120"/>
+                <w:rPr/>
+            </w:pPr>
+            <w:r>
+                <w:rPr/>
+                <w:t>As you read through this manual and supporting documents, you may find the definitions and descriptions in “SOP: Definitions (HRP-001)” particularly helpful.</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Normal"/>
+                <w:spacing w:before="120" w:after="120"/>
+                <w:rPr/>
+            </w:pPr>
+            <w:r>
+                <w:rPr/>
+                <w:t xml:space="preserve">The University has implemented (in March 2017) the Ethical Oversight Submission System (ETHOS), a web-based platform for IRB submissions and HRPP oversight.  Information about this system can be found on the </w:t>
+            </w:r>
+            <w:hyperlink r:id="rId3">
+                <w:r>
+                    <w:rPr>
+                        <w:rStyle w:val="InternetLink"/>
+                        <w:color w:val="0000FF"/>
+                        <w:u w:val="single"/>
+                    </w:rPr>
+                    <w:t>ETHOS</w:t>
+                </w:r>
+            </w:hyperlink>
+            <w:r>
+                <w:rPr>
+                    <w:color w:val="070707"/>
+                </w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr/>
+                <w:t xml:space="preserve">web page; job aides for use of the system can be found on the </w:t>
+            </w:r>
+            <w:hyperlink r:id="rId4">
+                <w:r>
+                    <w:rPr>
+                        <w:rStyle w:val="InternetLink"/>
+                        <w:color w:val="0000FF"/>
+                        <w:u w:val="single"/>
+                    </w:rPr>
+                    <w:t>Training and Resources</w:t>
+                </w:r>
+            </w:hyperlink>
+            <w:r>
+                <w:rPr>
+                    <w:color w:val="070707"/>
+                </w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr/>
+                <w:t>web page.</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Normal"/>
+                <w:spacing w:before="120" w:after="120"/>
+                <w:rPr/>
+            </w:pPr>
+            <w:r>
+                <w:rPr/>
+                <w:t>To ensure you are always referencing the most current version of Toolkit and related documents, please access them in real time from the IRB website rather than downloading and storing them on your computer.</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Normal"/>
+                <w:spacing w:before="120" w:after="120"/>
+                <w:rPr/>
+            </w:pPr>
+            <w:r>
+                <w:rPr/>
+                <w:t>We encourage you to use all of these resources to aid in the successful submission and conduct of your research study.</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Normal"/>
+                <w:spacing w:before="120" w:after="120"/>
+                <w:rPr/>
+            </w:pPr>
+            <w:hyperlink w:anchor="1fob9te">
+                <w:r>
+                    <w:rPr>
+                        <w:rStyle w:val="InternetLink"/>
+                        <w:color w:val="0000FF"/>
+                        <w:u w:val="single"/>
+                    </w:rPr>
+                    <w:t>Return to Table of Contents</w:t>
+                </w:r>
+            </w:hyperlink>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Normal"/>
+                <w:rPr>
+                    <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:eastAsia="Arial" w:cs="Arial"/>
+                    <w:b/>
+                    <w:sz w:val="32"/>
+                    <w:szCs w:val="32"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:eastAsia="Arial" w:cs="Arial"/>
+                    <w:b/>
+                    <w:sz w:val="32"/>
+                    <w:szCs w:val="32"/>
+                </w:rPr>
+            </w:r>
+        </w:p>
+        <w:sectPr>
+            <w:type w:val="nextPage"/>
+            <w:pgSz w:w="11906" w:h="16838"/>
+            <w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="0" w:footer="0" w:gutter="0"/>
+            <w:pgNumType w:fmt="decimal"/>
+            <w:formProt w:val="false"/>
+            <w:textDirection w:val="lrTb"/>
+        </w:sectPr>
+    </w:body>
+</w:document>
+WARN org.docx4j.openpackaging.parts.WordprocessingML.StyleDefinitionsPart .getDefaultParagraphStyle line 295 - No default paragraph style defined
+3950 [AWT-EventQueue-0] WARN org.docx4j.openpackaging.parts.WordprocessingML.StyleDefinitionsPart  - No default paragraph style defined
+WARN org.docx4j.model.PropertyResolver .init line 170 - No default paragraph style!!
+3950 [AWT-EventQueue-0] WARN org.docx4j.model.PropertyResolver  - No default paragraph style!!
+WARN org.docx4j.model.PropertyResolver .fillPPrStack line 1077 - Null styleId; Enable debug level logging to see code path
+3953 [AWT-EventQueue-0] WARN org.docx4j.model.PropertyResolver  - Null styleId; Enable debug level logging to see code path
+ERROR org.docx4j.model.PropertyResolver .fillRPrStack line 1199 - Style definition not found: null
+3964 [AWT-EventQueue-0] ERROR org.docx4j.model.PropertyResolver  - Style definition not found: null
+WARN org.docx4j.openpackaging.parts.WordprocessingML.StyleDefinitionsPart .getDefaultParagraphStyle line 295 - No default paragraph style defined
+3968 [AWT-EventQueue-0] WARN org.docx4j.openpackaging.parts.WordprocessingML.StyleDefinitionsPart  - No default paragraph style defined
+WARN org.docx4j.openpackaging.parts.WordprocessingML.StyleDefinitionsPart .getDefaultParagraphStyle line 295 - No default paragraph style defined
+4073 [AWT-EventQueue-0] WARN org.docx4j.openpackaging.parts.WordprocessingML.StyleDefinitionsPart  - No default paragraph style defined
+WARN org.docx4j.model.PropertyResolver .init line 170 - No default paragraph style!!
+4074 [AWT-EventQueue-0] WARN org.docx4j.model.PropertyResolver  - No default paragraph style!!
+WARN org.docx4j.model.PropertyResolver .fillPPrStack line 1077 - Null styleId; Enable debug level logging to see code path
+4074 [AWT-EventQueue-0] WARN org.docx4j.model.PropertyResolver  - Null styleId; Enable debug level logging to see code path
+ERROR org.docx4j.model.PropertyResolver .fillRPrStack line 1199 - Style definition not found: null
+4075 [AWT-EventQueue-0] ERROR org.docx4j.model.PropertyResolver  - Style definition not found: null
+WARN org.docx4j.openpackaging.parts.WordprocessingML.StyleDefinitionsPart .getDefaultParagraphStyle line 295 - No default paragraph style defined
+4076 [AWT-EventQueue-0] WARN org.docx4j.openpackaging.parts.WordprocessingML.StyleDefinitionsPart  - No default paragraph style defined
+INFO org.docx4j.jaxb.NamespacePrefixMapperUtils .getPrefixMapperRelationshipsPart line 136 - Using NamespacePrefixMapperRelationshipsPartSunInternal, which is suitable for Java 6
+4099 [AWT-EventQueue-0] INFO org.docx4j.jaxb.NamespacePrefixMapperUtils  - Using NamespacePrefixMapperRelationshipsPartSunInternal, which is suitable for Java 6
