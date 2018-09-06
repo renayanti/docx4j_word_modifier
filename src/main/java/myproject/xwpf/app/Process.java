@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.logging.Level;
@@ -19,6 +20,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.xml.bind.JAXBException;
 import org.apache.log4j.BasicConfigurator;
 import org.docx4j.Docx4jProperties;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
@@ -63,7 +65,7 @@ public final class Process extends JPanel {
 		});
 	}
 
-	Process(FileInputStream in) throws FileNotFoundException,IOException, Docx4JException{
+	Process(FileInputStream in) throws FileNotFoundException,IOException, Docx4JException, JAXBException{
 //		Logger logger = Logger.getLogger(XSLTUtils.class.getName());
 //		logger.setLevel(Level.OFF);
 		Docx4jProperties.getProperties().setProperty("docx4j.Log4j.Configurator.disabled", "true");
@@ -74,14 +76,23 @@ public final class Process extends JPanel {
 		fc =in;
 		document  = WordprocessingMLPackage.load(in);
 		MainDocumentPart mainpart = document.getMainDocumentPart();
+		String XPATH_TO_SELECT_TEXT_NODES = "//w:p";
+		List<Object> jaxbNodes = mainpart.getJAXBNodesViaXPath(XPATH_TO_SELECT_TEXT_NODES, true);
+
+		for (Object jaxbNode : jaxbNodes) {
+			final String paragraphString = jaxbNode.toString();
+			System.out.println("[Start]: " + paragraphString);
+		}
+		
+		
 //		List <Object> objects = mainpart.getContent();
 //		for (Object object  : objects ){
 //			String string = object.toString();
 //			System.out.println(string);
 //		}
 //		
-		WordprocessingMLPackage newdoc = copy(document);
-		writeDocxToStream(newdoc,"/home/x/Documents/temp/zz.docx");
+//		WordprocessingMLPackage newdoc = copy(document);
+//		writeDocxToStream(newdoc,"/home/x/Documents/temp/zz.docx");
 		
 	}
 	

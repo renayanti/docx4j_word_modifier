@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
+import javax.xml.bind.JAXBException;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 
 /**
@@ -80,6 +81,7 @@ public class MainPanel extends javax.swing.JPanel {
 				fc.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
 				fc.setToolTipText("");
 				fc.setAutoscrolls(true);
+				fc.setCurrentDirectory(new File("/home/x/Documents/zzz/sample/"));
 				fc.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 255, 153), new java.awt.Color(0, 255, 153), new java.awt.Color(0, 255, 150), new java.awt.Color(0, 255, 150)));
 				fc.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 				fc.getAccessibleContext().setAccessibleParent(jButton1);
@@ -98,6 +100,8 @@ public class MainPanel extends javax.swing.JPanel {
 		} catch (IOException ex) {
 			Logger.getLogger(MainPanel.class.getName()).log(Level.SEVERE, null, ex);
 		} catch (Docx4JException ex) {
+			Logger.getLogger(MainPanel.class.getName()).log(Level.SEVERE, null, ex);
+		} catch (JAXBException ex) {
 			Logger.getLogger(MainPanel.class.getName()).log(Level.SEVERE, null, ex);
 		} finally {
 			try {
