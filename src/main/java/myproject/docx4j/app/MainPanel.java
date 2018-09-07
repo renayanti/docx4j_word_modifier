@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package myproject.xwpf.app;
+package myproject.docx4j.app;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.xml.bind.JAXBException;
+import myproject.docx4j.app.Process;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 
 /**

@@ -17,7 +17,7 @@
     limitations under the License.
 
  */
-package myproject.xwpf.app;
+package myproject.docx4j.app;
 
 import java.io.StringWriter;
 import java.nio.ByteBuffer;
