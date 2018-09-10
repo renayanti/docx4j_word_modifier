@@ -1,38 +1,12 @@
-/*
-   Licensed to Plutext Pty Ltd under one or more contributor license agreements.  
-   
- *  This file is part of docx4j.
-
-    docx4j is licensed under the Apache License, Version 2.0 (the "License"); 
-    you may not use this file except in compliance with the License. 
-
-    You may obtain a copy of the License at 
-
-        http://www.apache.org/licenses/LICENSE-2.0 
-
-    Unless required by applicable law or agreed to in writing, software 
-    distributed under the License is distributed on an "AS IS" BASIS, 
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-    See the License for the specific language governing permissions and 
-    limitations under the License.
-
- */
 package myproject.docx4j.app;
 
-import java.io.StringWriter;
+
 import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.Set;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.docx4j.XmlUtils;
-import org.docx4j.model.datastorage.CustomXmlDataStorage;
 import org.docx4j.openpackaging.Base;
 import org.docx4j.openpackaging.contenttype.ContentType;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
@@ -53,21 +27,10 @@ import org.docx4j.utils.XSLTUtils;
 import org.docx4j.wml.Document;
 
 
-/** Create a partial deep copy of the document. All the parts are copied, 
- * as they may have some references to other parts. The data in the parts is 
- * only copied if the relationship type of the part is contained in the passed
- * relationshipTypes otherwise the new part contains a reference to the data 
- * of the old part.<br>
- * If the passed relationship types is null, then it will do a complete deep copy.
- * This is probably faster than storing and reading the document but it is restricted 
- * to Parts of the types: BinaryPart, JaxbXmlPart, CustomXmlDataStoragePart, XmlPart.<br>
- * If the passed relationship types is empty, then the passed Package is returned.  
- * 
- */
-public class clone {
+public class klone {
 	
+	protected static java.util.logging.Logger logger = java.util.logging.Logger.getLogger(XSLTUtils.class.getName());
 	protected static Logger log = LoggerFactory.getLogger(clone.class);
-	
 	
 	public static OpcPackage process(OpcPackage opcPackage, Set<String> relationshipTypes) throws Docx4JException {
 		
@@ -103,7 +66,7 @@ public class clone {
 								((WordprocessingMLPackage)opcPackage).getFontMapper(), false); //don't repopulate, since we want to preserve existing mappings
 					} catch (Exception e) {
 						// shouldn't happen
-						log.error(e.getMessage(),e);
+//						logger.(e.getMessage(),e);
 						throw new Docx4JException("Error setting font mapper on copy", e);
 					}
 				}
@@ -190,7 +153,11 @@ public class clone {
 				sourceRelationship = sourceRelationshipList.get(i);
 				//the Relationship doesn't have any references to parts, therefore it can be reused
 				targetRelationships.getRelationship().add(sourceRelationship);
-//				String zz = targetRelationships.getRelationship().getClass()
+//				String zz = sourceRelationship.getType();
+				Object zz = sourceRelationship.getParent();
+//				if(zz instanceof Document){
+					logger.info("source: " + zz.getClass().toString());
+//				}
 				if (sourceRelationship.getTargetMode()==null
 						// per ECMA 376 4ed Part 2, capitalisation should be thus: "External"
 						// but we can relax this..
@@ -225,7 +192,7 @@ public class clone {
 	protected static Part copyPart(Part part, OpcPackage targetPackage, boolean deepCopy) throws Docx4JException {
 	Part ret = null;
 		String zz;
-		zz = part.getPartName().getName();
+		zz = part.getClass().toString();
 //		System.out.println("=======>"+zz);
 //		if(zz == "")
 		
@@ -253,14 +220,15 @@ public class clone {
 	protected static void deepCopyContent(Part source, Part destination) throws Docx4JException {
 		java.util.logging.Logger logger = java.util.logging.Logger.getLogger(XSLTUtils.class.getName());
 		if (source instanceof BinaryPart) {
-			byte[] byteData = new byte[((BinaryPart)source).getBuffer().limit()]; // = remaining() when current pos = 0
-			((BinaryPart)source).getBuffer().get(byteData);
-			((BinaryPart)destination).setBinaryData(ByteBuffer.wrap(byteData));
+//			byte[] byteData = new byte[((BinaryPart)source).getBuffer().limit()]; // = remaining() when current pos = 0
+//			((BinaryPart)source).getBuffer().get(byteData);
+//			((BinaryPart)destination).setBinaryData(ByteBuffer.wrap(byteData));
 		}
 		else if (source instanceof JaxbXmlPart) {
 //			System.out.println("((JaxbXmlPart)source).getJAXBContext()).toString() =======>"+(((JaxbXmlPart)source).getXML()));
 //			StringWriter sb = new StringWriter();
 			Object zz	= ((JaxbXmlPart)source).getContents();
+//			Object zz	= ((JaxbXmlPart)source).getContents();
 //			System.out.println(zz.getClass());
 			if(zz instanceof Document){
 				WordprocessingMLPackage wordMLPackage = WordprocessingMLPackage.createPackage();
@@ -268,9 +236,9 @@ public class clone {
 //				logger.info("destination: " + ((JaxbXmlPart)destination).getXML());
 			}
 			else{
-				((JaxbXmlPart)destination).setJaxbElement(XmlUtils.deepCopy(((JaxbXmlPart)source).getJaxbElement(), 
-							((JaxbXmlPart)source).getJAXBContext()));
-				((JaxbXmlPart)destination).setJAXBContext(((JaxbXmlPart)source).getJAXBContext());
+//				((JaxbXmlPart)destination).setJaxbElement(XmlUtils.deepCopy(((JaxbXmlPart)source).getJaxbElement(), 
+//							((JaxbXmlPart)source).getJAXBContext()));
+//				((JaxbXmlPart)destination).setJAXBContext(((JaxbXmlPart)source).getJAXBContext());
 			}
 //			try {
 //				 JAXBContext context = JAXBContext.newInstance("com.integra.xml");
@@ -326,16 +294,26 @@ public class clone {
 			((BinaryPart)destination).setBinaryData(((BinaryPart)source).getBuffer());
 		}
 		else if (source instanceof JaxbXmlPart) {
-			((JaxbXmlPart)destination).setJaxbElement(((JaxbXmlPart)source).getJaxbElement());
-			((JaxbXmlPart)destination).setJAXBContext(((JaxbXmlPart)source).getJAXBContext());
+			Object zz	= ((JaxbXmlPart)source).getContents();
+//			Object zz	= ((JaxbXmlPart)source).getContents();
+//			System.out.println(zz.getClass());
+			if(zz instanceof Document){
+				WordprocessingMLPackage wordMLPackage = WordprocessingMLPackage.createPackage();
+//				logger.info("source: " + ((JaxbXmlPart)source).getXML());
+//				logger.info("destination: " + ((JaxbXmlPart)destination).getXML());
+			}
+			else{
+//				((JaxbXmlPart)destination).setJaxbElement(((JaxbXmlPart)source).getJaxbElement());
+//				((JaxbXmlPart)destination).setJAXBContext(((JaxbXmlPart)source).getJAXBContext());
+			}
 //			System.out.println("JaxbXmlPart =======>"+(((JaxbXmlPart)source).getXML()));
 		}
 		else if (source instanceof CustomXmlDataStoragePart) {
-			((CustomXmlDataStoragePart)destination).setData(((CustomXmlDataStoragePart)source).getData());
-			System.out.println("=======>"+(((CustomXmlDataStoragePart)source).getXML()));
+//			((CustomXmlDataStoragePart)destination).setData(((CustomXmlDataStoragePart)source).getData());
+//			System.out.println("=======>"+(((CustomXmlDataStoragePart)source).getXML()));
 		}
 		else if (source instanceof XmlPart) {
-			((XmlPart)destination).setDocument(((XmlPart)source).getDocument());
+//			((XmlPart)destination).setDocument(((XmlPart)source).getDocument());
 //			System.out.println("XmlPart =======>"+(((XmlPart)source).getDocument().getDocumentElement().getNodeName()));
 //			System.out.println("XmlPart =======>"+(((XmlPart)source).getDocument().getDocumentElement().getNodeValue()));
 		}
